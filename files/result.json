@@ -1,0 +1,30 @@
+[
+  {
+    "trainNum": "G102",
+    "canBuy": true
+  },
+  {
+    "trainNum": "G104",
+    "canBuy": true
+  },
+  {
+    "trainNum": "G6",
+    "canBuy": true
+  },
+  {
+    "trainNum": "G106",
+    "canBuy": true
+  },
+  {
+    "trainNum": "G108",
+    "canBuy": true
+  },
+  {
+    "trainNum": "G110",
+    "canBuy": true
+  },
+  {
+    "trainNum": "G120",
+    "canBuy": true
+  }
+]

@@ -3,7 +3,7 @@ const sendMail = require('./sendEmail')
 const { account } = require("../config.js")
 
 async function buyTicket(page, trainNum, index) {
-  await page.waitFor(3000)
+  await page.waitFor(2000)
   const allBtn = await page.$$('#queryLeftTable .no-br')
   await allBtn[index].click()
   await page.waitForSelector('.modal-login', { visible: true })
@@ -35,12 +35,12 @@ async function buyTicket(page, trainNum, index) {
   await page.click('#J-login', { delay: 300 })
   await page.waitForNavigation({ waitUntil: 'networkidle0' })
   await page.click('#normalPassenger_3', { delay: 300 })
-  await page.click('#dialog_xsertcj_cancel')
+  await page.click('#qd_closeDefaultWarningWindowDialog_id')
   await page.click('#submitOrder_id')
   sendMail(`您已抢到票${trainNum}`)
   // await page.click('#qr_submit_id') // 提交订单
-  await page.waitFor(2000);
-  await page.close();
+  // await page.waitFor(2000);
+  // await page.close();
 }
 
 const circle = (num, x, y) => { // 算出来点击位置

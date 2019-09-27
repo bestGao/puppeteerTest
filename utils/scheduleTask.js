@@ -2,7 +2,7 @@ const schedule = require("node-schedule");
 
 let count = 0
 function scheduleTask(runner, turns = 10) {
-  const task = schedule.scheduleJob("25 * 8-22 * * *", () => { // 每分钟的25秒 23:00-07:00 不爬
+  const task = schedule.scheduleJob("13 * 8-22 * * *", () => { // 每分钟的25秒 23:00-07:00 不爬
     runner();
     count++;
     console.log(

@@ -31,7 +31,7 @@ async function saveData(page) {
     allNums.push(obj)
     obj = {}
     if (favorite_nums.includes(trainNum) && canBuy) {
-      noneWanted = false
+      noneWanted = false;
       buyTicket(page, trainNum, index) // 直接买
       return false;
     }
@@ -41,8 +41,8 @@ async function saveData(page) {
     scheduleTask(() => reloadPage(page), 200)
   }
   await writeFile(resultDir, allNums);
-  await page.waitFor(80000);
-  await page.close();
+  // await page.waitFor(80000);
+  // await page.close();
 }
 
 function removeFile(fileDir) {
